@@ -33,7 +33,8 @@ export function Lesson(props: LessonProps) {
           {
             'bg-green-500': isActiveLesson,
           },
-        )}>
+        )}
+      >
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span
@@ -43,7 +44,8 @@ export function Lesson(props: LessonProps) {
                   'text-white': isActiveLesson,
                   'text-blue-500': !isActiveLesson,
                 },
-              )}>
+              )}
+            >
               <CheckCircle size={20} />
               Conteúdo Liberado
             </span>
@@ -61,7 +63,8 @@ export function Lesson(props: LessonProps) {
                 'border-white': isActiveLesson,
                 'border-green-300': !isActiveLesson,
               },
-            )}>
+            )}
+          >
             {props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
           </span>
         </header>
@@ -70,7 +73,8 @@ export function Lesson(props: LessonProps) {
           className={classNames('mt-5 block', {
             'text-white': isActiveLesson,
             'text-gray-200': !isActiveLesson,
-          })}>
+          })}
+        >
           {props.title}
         </strong>
       </div>
